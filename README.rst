@@ -2,7 +2,7 @@
 cookiecutter-pypackage
 ======================
 
-Cookiecutter template for a Python package. See https://github.com/audreyr/cookiecutter.
+Cookiecutter template for a Python package. See https://github.com/olgabot/cookiecutter.
 
 * Free software: BSD license
 * Vanilla testing setup with `unittest` and `python setup.py test`
@@ -15,14 +15,14 @@ Usage
 
 Generate a Python package project::
 
-    cookiecutter https://github.com/audreyr/cookiecutter-pypackage.git
+    cookiecutter https://github.com/olgabot/cookiecutter-pypackage.git
 
 Then:
 
 * Create a repo and put it there.
 * Add the repo to your Travis CI account.
 * Add the repo to your ReadTheDocs account + turn on the ReadTheDocs service hook.
-* Release your package the standard Python way. Here's a release checklist: https://gist.github.com/audreyr/5990987
+* Release your package the standard Python way. Here's a release checklist: https://gist.github.com/olgabot/5990987
 
 Not Exactly What You Want?
 --------------------------
@@ -68,6 +68,6 @@ make my own packaging experience better.
 .. _ReadTheDocs: https://readthedocs.org/
 .. _`Nekroze/cookiecutter-pypackage`: https://github.com/Nekroze/cookiecutter-pypackage
 .. _`tony/cookiecutter-pypackage`: https://github.com/tony/cookiecutter-pypackage
-.. _github comparison view: https://github.com/tony/cookiecutter-pypackage/compare/audreyr:master...master
-.. _`network`: https://github.com/audreyr/cookiecutter-pypackage/network
-.. _`family tree`: https://github.com/audreyr/cookiecutter-pypackage/network/members
+.. _github comparison view: https://github.com/tony/cookiecutter-pypackage/compare/olgabot:master...master
+.. _`network`: https://github.com/olgabot/cookiecutter-pypackage/network
+.. _`family tree`: https://github.com/olgabot/cookiecutter-pypackage/network/members

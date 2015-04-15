@@ -35,19 +35,16 @@ clean-test:
 	rm -fr htmlcov/
 
 lint:
-	flake8 {{ cookiecutter.repo_name }} tests
+	pyflakes {{ cookiecutter.repo_name }}
 
 test:
-	python setup.py test
+	py.test {{ cookiecutter.repo_name }}
 
-test-all:
-	tox
+pep8:
+	pep8 {{ cookiecutter.repo_name }}
 
 coverage:
-	coverage run --source {{ cookiecutter.repo_name }} setup.py test
-	coverage report -m
-	coverage html
-	open htmlcov/index.html
+	py.test --durations=20 --cov {{ cookiecutter.repo_name }} --cov-report term-missing {{ cookiecutter.repo_name }}/tests/
 
 docs:
 	rm -f docs/{{ cookiecutter.repo_name }}.rst

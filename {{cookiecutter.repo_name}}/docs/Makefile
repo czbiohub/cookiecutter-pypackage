@@ -47,9 +47,20 @@ help:
 	@echo "  doctest    to run all doctests embedded in the documentation (if enabled)"
 
 clean:
-	rm -rf $(BUILDDIR)/*
+	rm -rf $(BUILDDIR)
+	rm -rf {{ cookiecutter.repo_name }}*.rst
+	rm -rf modules.rst
+	rm -rf tutorial/*.rst
+	rm -rf tutorial/*_files
+	rm -rf tutorial/*.ipynb
+	rm -rf gallery*
+	rm -rf generated
+	rm -rf apidoc
 
 html:
+	cp ../examples/*.ipynb tutorial/;
+	cd tutorial ; make notebooks ; cd ..
+	sphinx-apidoc -l -d 4 -e --force -o . ../{{ cookiecutter.repo_name }}
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
@@ -85,17 +96,17 @@ qthelp:
 	@echo
 	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
 	      ".qhcp project file in $(BUILDDIR)/qthelp, like this:"
-	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/{{ cookiecutter.repo_name }}.qhcp"
+	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/flotilla.qhcp"
 	@echo "To view the help file:"
-	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/{{ cookiecutter.repo_name }}.qhc"
+	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/flotilla.qhc"
 
 devhelp:
 	$(SPHINXBUILD) -b devhelp $(ALLSPHINXOPTS) $(BUILDDIR)/devhelp
 	@echo
 	@echo "Build finished."
 	@echo "To view the help file:"
-	@echo "# mkdir -p $$HOME/.local/share/devhelp/{{ cookiecutter.repo_name }}"
-	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/{{ cookiecutter.repo_name }}"
+	@echo "# mkdir -p $$HOME/.local/share/devhelp/flotilla"
+	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/flotilla"
 	@echo "# devhelp"
 
 epub:
@@ -175,3 +186,5 @@ pseudoxml:
 	$(SPHINXBUILD) -b pseudoxml $(ALLSPHINXOPTS) $(BUILDDIR)/pseudoxml
 	@echo
 	@echo "Build finished. The pseudo-XML files are in $(BUILDDIR)/pseudoxml."
+
+include sphinx_deployment.mk
