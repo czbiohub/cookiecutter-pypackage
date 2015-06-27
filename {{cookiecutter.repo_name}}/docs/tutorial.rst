@@ -1,6 +1,6 @@
 .. _tutorial:
 
-{{cookiecutter.repo_name}} Tutorial
+{{ cookiecutter.repo_name }} Tutorial
 =================
 
 Installation
