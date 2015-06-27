@@ -1,6 +1,6 @@
 .. _tutorial:
 
-Flotilla tutorial
+{{cookiecutter.repo_name}} Tutorial
 =================
 
 Installation
@@ -17,7 +17,7 @@ Beginning examples
 .. toctree::
     :maxdepth: 1
 
-    tutorial/barebones_study_making
+    tutorial/beginning_examples
 
 Advanced examples
 -----------------
@@ -25,26 +25,15 @@ Advanced examples
 .. toctree::
     :maxdepth: 1
 
-    tutorial/modalities
+    tutorial/advanced_examples
 
-Day to day helpful tips
------------------------
+Day to day helpful tips and tricks
+----------------------------------
 
 .. toctree::
     :maxdepth: 2
 
-    tutorial/supplementaldata
-
-
-.. Plotting functions
-   ------------------
-   .. toctree::
-       :maxdepth: 1
-        tutorial/pca
-        tutorial/classification
-        tutorial/network
-        tutorial/expression_specific
-        tutorial/splicing_specific
+    tutorial/tips_and_tricks
 
 Recreated papers
 ----------------
