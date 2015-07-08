@@ -7,7 +7,7 @@ test:
 	py.test
 
 coverage:
-	coverage run --source {{ cookiecutter.repo_name }} --omit=test --module py.test
+	coverage run --source {{ cookiecutter.repo_name }} --omit=tests --module py.test
 
 lint:
 	flake8 {{ cookiecutter.repo_name }}
