@@ -2,7 +2,7 @@
 cookiecutter-pypackage
 ======================
 
-Cookiecutter template for a Python package. See https://github.com/olgabot/cookiecutter.
+Cookiecutter template for a Python package. See https://github.com/audreyr/cookiecutter.
 
 * Free software: BSD license
 * Vanilla testing setup with `unittest` and `python setup.py test`
