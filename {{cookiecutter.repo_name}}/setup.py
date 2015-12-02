@@ -14,12 +14,11 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read().replace('.. :changelog:', '')
 
-requirements = [
-    # TODO: put package requirements here
-]
+with open('requirements.txt') as requirements_file:
+    requirements = requirements_file.read()
 
 test_requirements = [
-    # TODO: put package test requirements here
+    'pytest', 'coverage'
 ]
 
 setup(

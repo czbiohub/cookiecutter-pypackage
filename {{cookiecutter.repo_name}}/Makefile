@@ -1,13 +1,14 @@
 help:
 	@echo "lint - check code style with flake8"
-	@echo "test - run tests quickly"
-	@echo "coverage - check code coverage quickly"
+	@echo "test - run tests only"
+	@echo "coverage - run tests and check code coverage"
 
 test:
 	py.test
 
 coverage:
-	coverage run --source {{ cookiecutter.repo_name }} --omit=tests --module py.test
+	coverage run --source {{ cookiecutter.repo_name }} --omit="*/test*" --module py.test
+	coverage report --show-missing
 
 lint:
-	flake8 {{ cookiecutter.repo_name }}
+	flake8 --exclude docs {{ cookiecutter.repo_name }}

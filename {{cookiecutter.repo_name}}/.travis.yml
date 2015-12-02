@@ -1,8 +1,6 @@
 language: python
 python:
-- '2.6'
 - '2.7'
-- '3.3'
 - '3.4'
 before_install:
 - if [ ${TRAVIS_PYTHON_VERSION:0:1} == "2" ]; then wget http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh
@@ -10,13 +8,13 @@ before_install:
   -O miniconda.sh; fi
 - chmod +x miniconda.sh
 - "./miniconda.sh -b"
-- if [ ${TRAVIS_PYTHON_VERSION:0:1} == "2" ]; then export PATH=~/miniconda/bin:$PATH;
+- if [ ${TRAVIS_PYTHON_VERSION:0:1} == "2" ]; then export PATH=~/miniconda2/bin:$PATH;
   else export PATH=~/miniconda3/bin/:$PATH; fi
 - conda update --yes conda
 install:
 - conda create -n testenv --yes python=$TRAVIS_PYTHON_VERSION pip
 - source activate testenv
-- conda install --yes pytest
+- conda install --yes --file conda_requirements.txt
 - pip install -r requirements.txt
 - pip install .
 before_script:
@@ -27,11 +25,11 @@ before_script:
 script:
 - make coverage
 - make lint
-- make pep8
 after_script:
+- pip install coverage
 - coveralls
 deploy:
   provider: pypi
   on:
     tags: true
-    repo: olgabot/sj2psi
+    repo: olgabot/{{ cookiecutter.repo_name }}
