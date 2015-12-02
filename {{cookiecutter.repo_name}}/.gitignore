@@ -44,3 +44,9 @@ docs/_build
 
 # PyCharm
 .idea
+
+# IPython
+.ipynb_checkpoints
+
+# Emacs
+*~
