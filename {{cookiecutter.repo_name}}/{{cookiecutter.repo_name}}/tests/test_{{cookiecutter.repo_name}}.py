@@ -8,21 +8,10 @@ test_{{ cookiecutter.repo_name }}
 Tests for `{{ cookiecutter.repo_name }}` module.
 """
 
-import unittest
-
-from {{ cookiecutter.repo_name }} import {{ cookiecutter.repo_name }}
+import pytest
 
 
-class Test{{ cookiecutter.repo_name|capitalize }}(unittest.TestCase):
+class Test{{ cookiecutter.repo_name|capitalize }}(object):
 
-    def setUp(self):
-        pass
-
-    def test_something(self):
-        pass
-
-    def tearDown(self):
-        pass
-
-if __name__ == '__main__':
-    unittest.main()
+    def test___init__(self, one_hundred):
+        assert 100 == one_hundred
