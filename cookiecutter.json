@@ -1,11 +1,12 @@
 {
-	"full_name": "Olga Botvinnik",
-	"email": "olga.botvinnik@gmail.com",
-	"github_username": "olgabot",
+	"full_name": "Chan Zuckerberg Biohub",
+	"github_username": "czbiohub",
 	"project_name": "Python Boilerplate",
+	"project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
 	"repo_name": "boilerplate",
 	"project_short_description": "Python Boilerplate contains all the boilerplate you need to create a Python package.",
-	"release_date": "2015-01-11",
-	"year": "2015",
+	"release_date": "{% now 'local' %}",
+	"year": "{{ cookiecutter.release_date[:4] }}",
+	"license": "MIT",
 	"version": "0.1.0"
 }
