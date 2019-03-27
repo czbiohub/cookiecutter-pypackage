@@ -1,5 +1,5 @@
 {
-	"full_name": "Chan Zuckerberg Biohub",
+	"organization": "Chan Zuckerberg Biohub",
 	"github_username": "czbiohub",
 	"project_name": "Python Boilerplate",
 	"project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
