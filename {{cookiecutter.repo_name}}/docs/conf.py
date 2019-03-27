@@ -56,7 +56,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'{{ cookiecutter.project_name }}'
-copyright = u'{{ cookiecutter.year }}, {{ cookiecutter.full_name }}'
+copyright = u'{{ cookiecutter.year }}, {{ cookiecutter.organization }}'
 
 # The version info for the project you're documenting, acts as replacement
 # for |version| and |release|, also used in various other places throughout
@@ -210,7 +210,7 @@ latex_elements = {
 latex_documents = [
     ('index', '{{ cookiecutter.repo_name }}.tex',
      u'{{ cookiecutter.project_name }} Documentation',
-     u'{{ cookiecutter.full_name }}', 'manual'),
+     u'{{ cookiecutter.organization }}', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at
@@ -241,7 +241,7 @@ latex_documents = [
 man_pages = [
     ('index', '{{ cookiecutter.repo_name }}',
      u'{{ cookiecutter.project_name }} Documentation',
-     [u'{{ cookiecutter.full_name }}'], 1)
+     [u'{{ cookiecutter.organization }}'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -253,10 +253,10 @@ man_pages = [
 # Grouping the document tree into Texinfo files. List of tuples
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
-texinfo_documents = [
+texinfo_documents= [
     ('index', '{{ cookiecutter.repo_name }}',
      u'{{ cookiecutter.project_name }} Documentation',
-     u'{{ cookiecutter.full_name }}',
+     u'{{ cookiecutter.organization }}',
      '{{ cookiecutter.repo_name }}',
      'One line description of project.',
      'Miscellaneous'),
