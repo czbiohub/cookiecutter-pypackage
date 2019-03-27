@@ -10,7 +10,7 @@ What is {{ cookiecutter.repo\_name }}?
 
 {{ cookiecutter.project\_short\_description}}
 
--   Free software: BSD license
+-   Free software: MIT license
 -   Documentation: <https://>{{ cookiecutter.github\_username }}.github.io/{{ cookiecutter.repo\_name }}
 
 Installation
@@ -18,7 +18,13 @@ Installation
 
 To install this code, clone this github repository and use pip to install
 
-> git clone <https://github.com/>{{ cookiecutter.github\_username }}/{{ cookiecutter.repo\_name }}.git cd {{ cookiecutter.repo\_name }} pip install . \# The "." means "install *this*, the folder where I am now"
+```
+git clone <https://github.com/>{{ cookiecutter.github\_username }}/{{ cookiecutter.repo\_name }}.git 
+cd {{ cookiecutter.repo\_name }} 
+
+# The "." means "install *this*, the folder where I am now"
+pip install . 
+```
 
 Features
 --------
