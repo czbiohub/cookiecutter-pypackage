@@ -1,11 +1,10 @@
-=======
 Credits
 =======
 
 Development Lead
 ----------------
 
-* {{ cookiecutter.full_name }} <{{ cookiecutter.email }}>
+-   {{ cookiecutter.full\_name }} &lt;{{ cookiecutter.email }}&gt;
 
 Contributors
 ------------
