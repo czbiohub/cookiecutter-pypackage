@@ -26,4 +26,4 @@ def hello(count, name):
     for x in tqdm(range(count)):
         # note that colorama.init() doesn't need to be called for the colors
         # to work
-        click.echo('Hello %s!' % name, fg=random.choice(COLORS))
+        click.echo(click.style('Hello %s!' % name, fg=random.choice(COLORS)))
