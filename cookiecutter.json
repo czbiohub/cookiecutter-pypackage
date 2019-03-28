@@ -1,5 +1,6 @@
 {
-	"full_name": "",
+	"full_name": "Olga Botvinnik",
+	"email": "{{ cookiecutter.project_name.lower().replace(' ', '.') }}@czbiohub.org",
 	"organization": "Chan Zuckerberg Biohub",
 	"github_username": "czbiohub",
 	"project_name": "Python Boilerplate",
