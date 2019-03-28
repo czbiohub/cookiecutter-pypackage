@@ -18,7 +18,7 @@ with open('requirements.txt') as requirements_file:
     requirements = requirements_file.read()
 
 test_requirements = [
-    'pytest', 'coverage'
+    'pytest', 'coverage', "flake8"
 ]
 
 setup(
@@ -36,7 +36,7 @@ setup(
                  '{{ cookiecutter.repo_name }}'},
     include_package_data=True,
     install_requires=requirements,
-    license="BSD",
+    license="MIT",
     zip_safe=False,
     keywords='{{ cookiecutter.repo_name }}',
     classifiers=[
@@ -48,6 +48,11 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
     ],
+    entry_points={
+        'console_scripts': [
+            'aguamenti = aguamenti.commandline:cli'
+        ]
+    },
     test_suite='tests',
     tests_require=test_requirements
 )
