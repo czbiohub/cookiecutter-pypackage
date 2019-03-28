@@ -50,7 +50,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'aguamenti = aguamenti.commandline:cli'
+            '{{ cookiecutter.repo_name }} = {{ cookiecutter.repo_name }}.commandline:cli'
         ]
     },
     test_suite='tests',
