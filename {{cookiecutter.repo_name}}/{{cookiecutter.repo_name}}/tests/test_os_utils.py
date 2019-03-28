@@ -1,6 +1,19 @@
+"""
+test_os_utils.py
+
+Tests for operating system utilities
+"""
+
 import os
 
 import pytest
+
+
+# Fixtures are functions-turned-variables that can be used across multiple
+# tests. conftest.py contains fixtures that can be used by any test file
+@pytest.fixture
+def folder():
+    return "test-folder"
 
 
 def test_sanitize_path():
@@ -11,10 +24,10 @@ def test_sanitize_path():
     assert test == true
 
 
-def test_maybe_add_slash():
+def test_maybe_add_slash(folder):
     from {{ cookiecutter.repo_name }}.os_utils import maybe_add_slash
 
-    test = maybe_add_slash("test-folder")
+    test = maybe_add_slash(folder)
     assert test == 'test-folder/'
 
 
