@@ -6,7 +6,7 @@ Cribbed from the Click documentation https://click.palletsprojects.com/en/7.x/
 import random
 
 import click
-import tqdm
+from tqdm import tqdm
 
 # Import modified 'os' module with LC_LANG set so click doesn't complain.
 # The '# noqa: F401' line prevents the linter from complaining about the unused
