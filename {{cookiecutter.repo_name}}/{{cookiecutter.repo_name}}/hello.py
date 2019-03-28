@@ -18,7 +18,7 @@ COLORS = 'black', 'red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white'
 
 
 @click.command()
-@click.option('--count', default=1, help='Number of greetings.')
+@click.option('--count', default=5, help='Number of greetings.')
 @click.option('--name', prompt='Your name',
               help='The person to greet.')
 def hello(count, name):
