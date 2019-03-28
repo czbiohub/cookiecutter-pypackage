@@ -18,6 +18,7 @@ Cookiecutter template for a Python package. See <https://github.com/audreyr/cook
 - [tqdm](https://tqdm.github.io/) for progress bars
 - Specifies "Chan Zuckerberg Biohub" as the organization in the copyright
   sections of the License and documentation
+- Adds MacOS, Python, and JetBrains files to gitignore
 
 Usage
 -----
