@@ -26,6 +26,16 @@ cd {{ cookiecutter.repo\_name }}
 pip install . 
 ```
 
+Usage
+-----
+
+Greet a name multiple times!
+
+```
+$ {{ cookiecutter.project\_name }} hello --name "Rosalind Franklin" --count 10 
+```
+
+
 Features
 --------
 
