@@ -10,7 +10,8 @@ Types of Contributions
 
 ### Report Bugs
 
-Report bugs at <https://github.com/>{{ cookiecutter.github\_username }}/{{ cookiecutter.repo\_name }}/issues.
+Report bugs at <https://github.com/>{{ cookiecutter.github_username }}/{{
+cookiecutter.repo_name }}/issues.
 
 If you are reporting a bug, please include:
 
@@ -28,11 +29,14 @@ Look through the GitHub issues for features. Anything tagged with "feature" is o
 
 ### Write Documentation
 
-{{ cookiecutter.project\_name }} could always use more documentation, whether as part of the official {{ cookiecutter.project\_name }} docs, in docstrings, or even on the web in blog posts, articles, and such.
+{{ cookiecutter.project_name }} could always use more documentation, whether as
+part of the official {{ cookiecutter.project_name }} docs, in docstrings, or
+even on the web in blog posts, articles, and such.
 
 ### Submit Feedback
 
-The best way to send feedback is to file an issue at <https://github.com/>{{ cookiecutter.github\_username }}/{{ cookiecutter.repo\_name }}/issues.
+The best way to send feedback is to file an issue at <https://github.com/>{{
+cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/issues.
 
 If you are proposing a feature:
 
