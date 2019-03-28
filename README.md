@@ -32,32 +32,41 @@ Usage
 This will give you a "quiz" to ask you your name, the name of the project,
 release date and so on. Pressing "Enter" will use the default values.
 
-### 2. Change to the newly created directory
+
+Example output:
+
+```
+(base)
+ ✘  Wed 27 Mar - 17:13  ~/code 
+  cookiecutter https://github.com/czbiohub/cookiecutter-pypackage.git
+You've downloaded /Users/olgabot/.cookiecutters/cookiecutter-pypackage before. Is it okay to delete and re-download it? [yes]: y
+full_name [Rosalind Franklin]: Olga Botvinnik
+email [olga.botvinnik@czbiohub.org]:
+organization [Chan Zuckerberg Biohub]:
+github_username [czbiohub]:
+project_name [Python Boilerplate]: Python Boilerplate Test01
+repo_name [python_boilerplate_test01]:
+project_short_description [Python Boilerplate contains all the boilerplate you need to create a Python package.]:
+release_date [2019-03-27]:
+year [2019]:
+license [MIT]:
+version [0.1.0]:
+```
+
+### 2. Change to the newly created directory and initialize git
 
 E.g. if your project is named `python_boilerplate_test01`
 
 ```
 cd python_boilerplate_test01
 ```
-
-### Initialize a git repository and add files
+Initialize git and add files:
 
 ```
 git init
 git add -A .
 git commit -m "First commit"
 ```
-
-
-### Create the remote repository on GitHub
-
-![](figures/create_repository.png)
-
-```
-git remote add origin https://github.com/czbiohub/python_boilerplate_test01.git
-git push -u origin master
-```
-
 
 Example output:
 
@@ -117,19 +126,30 @@ Initialized empty Git repository in /Users/olgabot/code/python_boilerplate_test0
  create mode 100644 requirements.txt
  create mode 100644 setup.cfg
  create mode 100755 setup.py
-(base)
- Wed 27 Mar - 17:31  ~/code/python_boilerplate_test01   master ✔ 
-  git remote add origin https://github.com/czbiohub/python_boilerplate_test01.git
-git push -u origin master
-Counting objects: 45, done.
-Delta compression using up to 8 threads.
-Compressing objects: 100% (35/35), done.
-Writing objects: 100% (45/45), 22.78 KiB | 3.80 MiB/s, done.
-Total 45 (delta 0), reused 0 (delta 0)
-	To https://github.com/czbiohub/python_boilerplate_test01.git
- * [new branch]      master -> master
-Branch master set up to track remote branch master from origin by rebasing.
 ```
+
+### Create the remote repository on GitHub
+
+Go to [github.com]([https://github.com](https://github.com/) ) and click the
+plus sign ("+") to create a repository under the `czbiohub` organization. Since
+via `cookiecutter` we already have a README and LICENSE, we don't need those
+files. We'll want to check the box for Travis-CI integration to run the tests
+for the code automatically.
+
+![Example inputs for creating a repository](figures/create_repository.png)
+
+### Push the newly created Python package to GitHub
+
+After the repository is created, now we need to push the
+
+![](figures/github_repository_created_now_what.png)
+
+```
+git remote add origin https://github.com/czbiohub/python_boilerplate_test01.git
+git push -u origin master
+```
+
+
 
 Then:
 
@@ -137,3 +157,8 @@ Then:
 -   Add the repo to your Travis CI account.
 -   Add the repo to your ReadTheDocs account + turn on the ReadTheDocs service hook.
 -   Release your package the standard Python way. Here's a release checklist: <https://gist.github.com/olgabot/5990987>
+
+
+### Check out the `hello` subcommand of your program!
+
+This comes pre-canned with an example command line subcommand and how to test it.
