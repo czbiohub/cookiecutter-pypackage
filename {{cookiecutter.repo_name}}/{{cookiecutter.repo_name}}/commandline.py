@@ -3,13 +3,19 @@
 # Import modified 'os' module with LC_LANG set so click doesn't complain
 from .os_utils import os  # noqa: F401
 
+# Python standard library imports
+from functools import partial
+
+# 3rd party libraries
 import click
 
-settings = dict(help_option_names=['-h', '--help'])
-
+# Within-module imports
 from {{ cookiecutter.repo_name }}.hello import hello
 
 
+click.option = partial(click.option, show_default=True)
+
+settings = dict(help_option_names=['-h', '--help'])
 
 @click.group(options_metavar='', subcommand_metavar='<command>',
              context_settings=settings)
