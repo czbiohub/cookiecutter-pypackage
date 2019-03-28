@@ -11,7 +11,7 @@ from {{ cookiecutter.repo_name }}.hello import hello
 
 
 
-@click.group(options_metavar='', hello_metavar='<command>',
+@click.group(options_metavar='', subcommand_metavar='<command>',
              context_settings=settings)
 def cli():
     """
