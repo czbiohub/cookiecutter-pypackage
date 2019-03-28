@@ -3,6 +3,9 @@ cookiecutter-pypackage
 
 Cookiecutter template for a Python package. See <https://github.com/audreyr/cookiecutter>.
 
+
+![](figures/cookiecutter_create_project.gif)
+
 -   Free software: MIT License
 - Python package setup with setup.py
 -   [pytest](https://docs.pytest.org/en/latest/ ) testing setup
