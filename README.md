@@ -6,6 +6,10 @@ Cookiecutter template for a Python package. See <https://github.com/audreyr/cook
 
 ![](figures/cookiecutter_create_project.gif)
 
+
+The above code was used to generate
+[this example Python package](https://github.com/czbiohub/examplepy).
+
 -   Free software: MIT License
 - Python package setup with setup.py
 -   [pytest](https://docs.pytest.org/en/latest/ ) testing setup
@@ -23,6 +27,7 @@ Cookiecutter template for a Python package. See <https://github.com/audreyr/cook
   sections of th
 - e License and documentation
 - Adds MacOS, Python, and JetBrains files to gitignore
+
 
 Usage
 -----
