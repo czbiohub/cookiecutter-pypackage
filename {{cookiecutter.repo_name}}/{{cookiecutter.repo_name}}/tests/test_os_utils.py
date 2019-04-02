@@ -44,5 +44,5 @@ def test_get_stdout_stderr_from_command():
     command = ['sed', 'asdf']
     stdout, stderr = get_stdout_stderr_from_command(command)
     assert stdout == []
-    assert stderr == ['sed: 1: "asdf": command a expects \ followed by text']
+    assert stderr == ['sed: 1: "asdf": command a expects']
 
