@@ -14,7 +14,7 @@ from tqdm import tqdm
 from .os_utils import os    # noqa: F401
 
 
-COLORS = 'black', 'red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white'
+COLORS = 'red', 'green', 'yellow', 'blue', 'magenta', 'cyan'
 
 
 @click.command()
