@@ -154,10 +154,159 @@ git push -u origin master
 ```
 
 
+### Install your package!
+
+First, you'll want to create an environment, then activate it, and install the package.
+
+```
+conda create -n examplepy python=3.6 --file conda_requirements.txt
+conda activate examplepy
+pip install -e .
+```
+
+Here's the example output for the installation:
+
+```
+(base)
+ Mon  1 Apr - 17:33  ~/code/examplepy 
+  conda create -n examplepy python=3.6 --file conda_requirements.txt
+Collecting package metadata: done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /anaconda3/envs/examplepy
+
+  added / updated specs:
+    - click
+    - colorama
+    - coverage
+    - flake8
+    - pytest
+    - python=3.6
+    - tqdm
+
+
+The following NEW packages will be INSTALLED:
+
+  atomicwrites       conda-forge/noarch::atomicwrites-1.3.0-py_0
+  attrs              conda-forge/noarch::attrs-19.1.0-py_0
+  ca-certificates    conda-forge/osx-64::ca-certificates-2019.3.9-hecc5488_0
+  certifi            conda-forge/osx-64::certifi-2019.3.9-py36_0
+  click              conda-forge/noarch::click-7.0-py_0
+  colorama           conda-forge/noarch::colorama-0.4.1-py_0
+  coverage           conda-forge/osx-64::coverage-4.5.3-py36h1de35cc_0
+  entrypoints        conda-forge/osx-64::entrypoints-0.3-py36_1000
+  flake8             conda-forge/osx-64::flake8-3.7.7-py36_0
+  libcxx             pkgs/main/osx-64::libcxx-4.0.1-hcfea43d_1
+  libcxxabi          pkgs/main/osx-64::libcxxabi-4.0.1-hcfea43d_1
+  libffi             conda-forge/osx-64::libffi-3.2.1-h6de7cb9_1006
+  mccabe             conda-forge/noarch::mccabe-0.6.1-py_1
+  more-itertools     conda-forge/osx-64::more-itertools-4.3.0-py36_1000
+  ncurses            conda-forge/osx-64::ncurses-6.1-h0a44026_1002
+  openssl            conda-forge/osx-64::openssl-1.1.1b-h01d97ff_2
+  pip                conda-forge/osx-64::pip-19.0.3-py36_0
+  pluggy             conda-forge/noarch::pluggy-0.9.0-py_0
+  py                 conda-forge/noarch::py-1.8.0-py_0
+  pycodestyle        conda-forge/noarch::pycodestyle-2.5.0-py_0
+  pyflakes           conda-forge/noarch::pyflakes-2.1.1-py_0
+  pytest             conda-forge/osx-64::pytest-4.4.0-py36_1
+  python             conda-forge/osx-64::python-3.6.7-h8dc6b48_1004
+  readline           conda-forge/osx-64::readline-7.0-hcfe32e1_1001
+  setuptools         conda-forge/osx-64::setuptools-40.8.0-py36_0
+  six                conda-forge/osx-64::six-1.12.0-py36_1000
+  sqlite             conda-forge/osx-64::sqlite-3.26.0-h1765d9f_1001
+  tk                 conda-forge/osx-64::tk-8.6.9-ha441bb4_1001
+  tqdm               conda-forge/noarch::tqdm-4.31.1-py_0
+  wheel              conda-forge/osx-64::wheel-0.33.1-py36_0
+  xz                 conda-forge/osx-64::xz-5.2.4-h1de35cc_1001
+  zlib               conda-forge/osx-64::zlib-1.2.11-h1de35cc_1004
+
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+#     $ conda activate examplepy
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+(base)
+ Mon  1 Apr - 17:34  ~/code/examplepy 
+  conda activate examplepy
+(examplepy)
+ Mon  1 Apr - 17:34  ~/code/examplepy 
+  pip install -e .
+Obtaining file:///Users/olgabot/code/examplepy
+Requirement already satisfied: pytest in /anaconda3/envs/examplepy/lib/python3.6/site-packages (from examplepy==0.1.0) (4.4.0)
+Requirement already satisfied: flake8 in /anaconda3/envs/examplepy/lib/python3.6/site-packages (from examplepy==0.1.0) (3.7.7)
+Requirement already satisfied: coverage in /anaconda3/envs/examplepy/lib/python3.6/site-packages (from examplepy==0.1.0) (4.5.3)
+Requirement already satisfied: click in /anaconda3/envs/examplepy/lib/python3.6/site-packages (from examplepy==0.1.0) (7.0)
+Requirement already satisfied: setuptools>=38.6.0 in /anaconda3/envs/examplepy/lib/python3.6/site-packages (from examplepy==0.1.0) (40.8.0)
+Requirement already satisfied: tqdm in /anaconda3/envs/examplepy/lib/python3.6/site-packages (from examplepy==0.1.0) (4.31.1)
+Requirement already satisfied: colorama in /anaconda3/envs/examplepy/lib/python3.6/site-packages (from examplepy==0.1.0) (0.4.1)
+Requirement already satisfied: py>=1.5.0 in /anaconda3/envs/examplepy/lib/python3.6/site-packages (from pytest->examplepy==0.1.0) (1.8.0)
+Requirement already satisfied: six>=1.10.0 in /anaconda3/envs/examplepy/lib/python3.6/site-packages (from pytest->examplepy==0.1.0) (1.12.0)
+Requirement already satisfied: attrs>=17.4.0 in /anaconda3/envs/examplepy/lib/python3.6/site-packages (from pytest->examplepy==0.1.0) (19.1.0)
+Requirement already satisfied: atomicwrites>=1.0 in /anaconda3/envs/examplepy/lib/python3.6/site-packages (from pytest->examplepy==0.1.0) (1.3.0)
+Requirement already satisfied: pluggy>=0.9 in /anaconda3/envs/examplepy/lib/python3.6/site-packages (from pytest->examplepy==0.1.0) (0.9.0)
+Requirement already satisfied: more-itertools>=4.0.0 in /anaconda3/envs/examplepy/lib/python3.6/site-packages (from pytest->examplepy==0.1.0) (4.3.0)
+Requirement already satisfied: entrypoints<0.4.0,>=0.3.0 in /anaconda3/envs/examplepy/lib/python3.6/site-packages (from flake8->examplepy==0.1.0) (0.3)
+Requirement already satisfied: pyflakes<2.2.0,>=2.1.0 in /anaconda3/envs/examplepy/lib/python3.6/site-packages (from flake8->examplepy==0.1.0) (2.1.1)
+Requirement already satisfied: pycodestyle<2.6.0,>=2.5.0 in /anaconda3/envs/examplepy/lib/python3.6/site-packages (from flake8->examplepy==0.1.0) (2.5.0)
+Requirement already satisfied: mccabe<0.7.0,>=0.6.0 in /anaconda3/envs/examplepy/lib/python3.6/site-packages (from flake8->examplepy==0.1.0) (0.6.1)
+Installing collected packages: examplepy
+  Running setup.py develop for examplepy
+Successfully installed examplepy
+```
+
 
 ### Check out the `hello` subcommand of your program!
 
 This comes pre-canned with an example command line subcommand and how to test it.
+
+
+```
+(examplepy)
+ Mon  1 Apr - 17:34  ~/code/examplepy 
+  examplepy hello --name olga
+  0%|                                                                                                                 | 0/5 [00:00<?, ?it/s]Hello olga!
+Hello olga!
+Hello olga!
+Hello olga!
+Hello olga!
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00, 20400.31it/s]
+
+```
+
+The percent and blocks are using [`tqdm`](https://github.com/tqdm/tqdm) which
+is a nice progress bar in Python.
+
+### Check out the tests!
+
+Try running the tests with the `make test` command. See the full command in the
+[`Makefile`]({{cookiecutter.repo_name}}/Makefile).
+
+```
+(examplepy)
+ ✘  Mon  1 Apr - 17:43  ~/code/examplepy   origin ☊ master 1● 
+  make test
+py.test
+=========================================================== test session starts ============================================================
+platform darwin -- Python 3.6.7, pytest-4.4.0, py-1.8.0, pluggy-0.9.0
+rootdir: /Users/olgabot/code/examplepy
+collected 10 items
+
+examplepy/tests/test_commandline.py ...                                                                                              [ 30%]
+examplepy/tests/test_hello.py ...                                                                                                    [ 60%]
+examplepy/tests/test_os_utils.py ....                                                                                                [100%]
+
+======================================================== 10 passed in 0.13 seconds =========================================================
+```
 
 
 ### Add autogenerated documentation
