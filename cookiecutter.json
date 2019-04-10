@@ -2,7 +2,7 @@
 	"full_name": "Rosalind Franklin",
 	"email": "{{ cookiecutter.full_name.lower().replace(' ', '.') }}@czbiohub.org",
 	"organization": "Chan Zuckerberg Biohub",
-	"github_username": "czbiohub",
+	"github_organization": "czbiohub",
 	"project_name": "Python Boilerplate",
 	"repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
 	"project_short_description": "{{ cookiecutter.project_name }} contains all the boilerplate you need to create a Python package.",
