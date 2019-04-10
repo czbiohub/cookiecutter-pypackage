@@ -25,4 +25,4 @@ deploy:
   provider: pypi
   on:
     tags: true
-    repo: {{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}
+    repo: {{ cookiecutter.github_organization }}/{{ cookiecutter.repo_name }}
