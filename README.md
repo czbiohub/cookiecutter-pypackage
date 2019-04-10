@@ -24,8 +24,8 @@ The above code was used to generate
   outputs
 - [tqdm](https://tqdm.github.io/) for progress bars
 - Specifies "Chan Zuckerberg Biohub" as the organization in the copyright
-  sections of th
-- e License and documentation
+  sections of the License and documentation
+
 - Adds MacOS, Python, and JetBrains files to gitignore
 
 
